@@ -5,8 +5,8 @@ extern int yylex();
 %}
 
 %union {
-    int num;
-    char* str;
+	int num;
+	char* str;
 }
 
 %token PRINT TIMES
@@ -15,22 +15,22 @@ extern int yylex();
 
 %%
 
-start   : line
-    | start line
+start	: line
+		| start line
 ;
 
-line    : PRINT STRING NUMBER TIMES             {
-                for(int i=0; i<$3; i++) printf("%s\n",$2);
-                printf("\n");
-            }
+line	: PRINT STRING NUMBER TIMES             {
+				for(int i=0; i<$3; i++) printf("%s\n",$2);
+				printf("\n");
+			}
 ;
 
 %%
 
 int main(){
-    return yyparse();
+	return yyparse();
 }
 
 void yyerror(char* s){
-    fprintf(stderr, "%s\n", s);
+	fprintf(stderr, "%s\n", s);
 }
