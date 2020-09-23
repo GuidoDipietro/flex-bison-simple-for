@@ -1,12 +1,12 @@
-## Loop "for" en Flex-Bison
+# Loop "for" en Flex-Bison
 
 Implementación muy reducida de un bucle "for" alternativo.  
 
-### Funcionamiento y sintaxis   
+## Funcionamiento y sintaxis   
 
 ```print CADENA NUMERO times```  
 
-### Expresiones regulares  
+## Expresiones regulares  
 
 - CADENA: `\"[a-zA-Z]*\"` (cualquier cantidad de letras mayúsculas y minúsculas entre comillas dobles)
 - NUMERO: `[1-9][0-9]*` (cualquier número entero que no empiece con 0)
@@ -18,13 +18,13 @@ flex ERtest.l
 gcc lex.yy.c -o ERtest
 ```
 
-### Ejemplos  
+## Ejemplos  
 
 ![](img/1.PNG)  
 ![](img/2.PNG)  
 ![](img/3.PNG)  
 
-### Compilar  
+## Compilar  
 
 Ejecutar el batchfile `compilar.bat`, o bien ejecutar estos comandos en la terminal:  
 
