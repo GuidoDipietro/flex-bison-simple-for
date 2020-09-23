@@ -16,7 +16,7 @@ extern int yylex();
 %%
 
 start   : line
-    | start line
+        | start line
 ;
 
 line    : PRINT STRING NUMBER TIMES             {
